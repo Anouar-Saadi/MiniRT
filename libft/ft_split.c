@@ -6,13 +6,13 @@
 /*   By: asaadi <asaadi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 14:53:45 by asaadi            #+#    #+#             */
-/*   Updated: 2020/11/04 17:57:42 by asaadi           ###   ########.fr       */
+/*   Updated: 2020/12/03 14:17:41 by asaadi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count_alloc_t(const char *s, char c)
+static int	ft_count_alloc_t(const char *s, char c)
 {
 	int i;
 	int count;
@@ -40,7 +40,7 @@ static int ft_count_alloc_t(const char *s, char c)
 	return (count);
 }
 
-static int ft_slen(int index, const char *str, char c)
+static int	ft_slen(int index, const char *str, char c)
 {
 	int i;
 
@@ -50,7 +50,7 @@ static int ft_slen(int index, const char *str, char c)
 	return (i - index);
 }
 
-static char **ft_failed_alloc(char **res, int j)
+static char	**ft_failed_alloc(char **res, int j)
 {
 	j = j - 1;
 	while (res[j])
@@ -62,7 +62,7 @@ static char **ft_failed_alloc(char **res, int j)
 	return (NULL);
 }
 
-static char **ft_split_it(char **res, const char *s, char c)
+static char	**ft_split_it(char **res, const char *s, char c)
 {
 	int i;
 	int j;
@@ -88,10 +88,10 @@ static char **ft_split_it(char **res, const char *s, char c)
 	return (res);
 }
 
-char **ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
-	char **res;
-	int word;
+	char	**res;
+	int		word;
 
 	if (!s)
 		return (NULL);
